@@ -17,6 +17,6 @@ This project is a implementation of the  Figma design using **HTML, CSS, and Jav
 ### **Technologies Used**
 - **HTML5 for structuring the webpage.**
 - **CSS3 for styling and animations.**
-- **Vanilla JavaScript for handling navigation transitions.**
+- **JavaScript for handling navigation transitions.**
 
 
