@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #e91e63;
+}
+
+/* Container (Sliding Effect for Desktop) */
+.container {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#our-team {
+    background: #f5f5f5;
+}
+
+#personal-details {
+    background: #e91e63;
+    color: white;
+}
+
+#contact-us {
+    background: #ff9800;
+    color: white;
+}
+
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.member {
+    text-align: center;
+    width: 200px;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+#personal-details form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#personal-details input,
+button {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: black;
+    color: white;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.side-buttons {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-button {
+    writing-mode: vertical-rl;
+    /* Keeps vertical text */
+    transform: rotate(180deg);
+    /* Ensures proper orientation */
+    padding: 15px;
+    width: 50px;
+    /* Maintains button size */
+    background: #e91e63;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.side-button:last-child {
+    background: #ff9800;
+}
+
+.side-button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        display: block;
+        width: 100%;
+    }
+
+    .section {
+        width: 100%;
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member {
+        width: 90%;
+    }
+
+    #personal-details input,
+    #personal-details button {
+        width: 90%;
+        max-width: 300px;
+    }
+
+
+    .side-buttons {
+        display: none;
+    }
+}
